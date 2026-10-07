@@ -1,71 +1,37 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const orderForm = document.getElementById("orderForm");
-  const saveOrderBtn = document.getElementById("saveOrderBtn");
-  const printInvoiceBtn = document.getElementById("printInvoiceBtn");
-  const runAnalysisBtn = document.getElementById("runAnalysisBtn");
-  const analysisInput = document.getElementById("analysisInput");
-  const scoreLabel = document.querySelector(".score-meta strong");
-  const progressBar = document.querySelector(".score-block .progress span");
+# Musikproduktionsplattform
 
-  const updateSavedOrderState = () => {
-    const formData = new FormData(orderForm);
-    const values = Object.fromEntries(formData.entries());
-    localStorage.setItem("audiFlowOrder", JSON.stringify(values));
-  };
+Diese Plattform ist ein MVP für eine Musikproduktions- und Auftragsverwaltung mit:
 
-  const loadSavedOrder = () => {
-    const saved = localStorage.getItem("audiFlowOrder");
-    if (!saved) return;
+- Landingpage / Sales-Seite
+- Projektauftragserfassung mit Auftragsnummern
+- Rollen- und Accountverwaltung
+- Studio-Dashboard
+- Kanban-Workflow
+- Rechnungserstellung mit PDF-Export
+- Analyse-/Plagiatsprüfungstool
+- Login- und Demo-Ansicht
 
-    try {
-      const data = JSON.parse(saved);
-      Object.entries(data).forEach(([key, value]) => {
-        const field = orderForm.elements.namedItem(key);
-        if (field) field.value = value;
-      });
-    } catch (error) {
-      console.error("Could not parse saved order", error);
-    }
-  };
+## Starten
 
-  if (orderForm) {
-    orderForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      updateSavedOrderState();
-      const button = event.submitter || orderForm.querySelector("button[type='submit']");
-      if (button) {
-        button.textContent = "Auftrag gespeichert";
-        button.disabled = true;
-        setTimeout(() => {
-          button.textContent = "Auftrag anlegen";
-          button.disabled = false;
-        }, 1800);
-      }
-    });
+Einfach die Datei `index.html` im Browser öffnen.
 
-    saveOrderBtn?.addEventListener("click", updateSavedOrderState);
-  }
+Für eine direktere Demo:
+- `index.html` = Landingpage / Startseite
+- `login.html` = Loginseite
+- `dashboard.html` = Admin-/Studio-Dashboard
 
-  if (printInvoiceBtn) {
-    printInvoiceBtn.addEventListener("click", () => {
-      window.print();
-    });
-  }
+## Technologie
 
-  if (runAnalysisBtn && analysisInput && scoreLabel && progressBar) {
-    runAnalysisBtn.addEventListener("click", () => {
-      const rawText = analysisInput.value.trim();
-      const baseScore = Math.max(84, 100 - (rawText.length % 18) * 0.6);
-      const score = Number(baseScore.toFixed(1));
-      scoreLabel.textContent = `${score}%`;
-      progressBar.style.width = `${score}%`;
-      runAnalysisBtn.textContent = "Analyse fertig";
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Responsive Design
 
-      setTimeout(() => {
-        runAnalysisBtn.textContent = "Analyse ausführen";
-      }, 1400);
-    });
-  }
+## Nächste Schritte
 
-  loadSavedOrder();
-});
+- echte Datenbank + Authentifizierung
+- Rollenverwaltung mit Backend
+- PDF-Generator mit Rechnungsdaten
+- Uploads und Audiomanagement
+- Kanban mit Drag-and-Drop
+- echte Plagiats-/Ähnlichkeitsprüfung via API

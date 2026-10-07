@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudiFlow | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell dashboard-shell">
+      <div class="dashboard-wrap">
+        <aside class="sidebar">
+          <div class="logo-block">
+            <div class="brand-mark">A</div>
+            <div>
+              <div class="brand-name">AudiFlow</div>
+              <div class="brand-sub">Admin Console</div>
+            </div>
+          </div>
+
+          <nav>
+            <a href="#" class="active">🏠 Dashboard</a>
+            <a href="#">🎵 Aufträge</a>
+            <a href="#">📦 Projekte</a>
+            <a href="#">💰 Rechnungen</a>
+            <a href="#">📄 Analysen</a>
+            <a href="#">🧾 Plagiatsprüfungen</a>
+            <a href="#">⚙️ Einstellungen</a>
+          </nav>
+        </aside>
+
+        <main class="dashboard-main">
+          <section class="top-panel">
+            <div class="page-title">
+              <h2>Übersicht</h2>
+              <p>Studio-Management für Produktion, Rechnung, Prüfung und Team</p>
+            </div>
+
+            <div class="header-actions">
+              <button class="secondary-btn" type="button">Export</button>
+              <a href="login.html" class="primary-btn">Neues Login</a>
+            </div>
+          </section>
+
+          <section class="kpi-grid">
+            <div class="kpi-card">
+              <small>Umsatz</small>
+              <strong>€48.2k</strong>
+              <span class="delta">+12.4%</span>
+            </div>
+            <div class="kpi-card">
+              <small>Aktive Projekte</small>
+              <strong>86</strong>
+              <span class="delta">+8</span>
+            </div>
+            <div class="kpi-card">
+              <small>Offene Rechnungen</small>
+              <strong>19</strong>
+              <span class="delta">-3</span>
+            </div>
+            <div class="kpi-card">
+              <small>Prüfungen</small>
+              <strong>12</strong>
+              <span class="delta">+5</span>
+            </div>
+          </section>
+
+          <section class="dashboard-grid">
+            <div class="data-card">
+              <div class="card-head">
+                <h3>Letzte Aufträge</h3>
+                <span class="pill neutral">Live</span>
+              </div>
+
+              <div class="table-wrap">
+                <table class="order-table">
+                  <thead>
+                    <tr>
+                      <th>Kunde</th>
+                      <th>Projekt</th>
+                      <th>Datum</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Lena Musik</td>
+                      <td>Summer Pulse</td>
+                      <td>07.10.2026</td>
+                      <td><span class="status-badge review">Review</span></td>
+                    </tr>
+                    <tr>
+                      <td>North Echo</td>
+                      <td>Velvet Nights</td>
+                      <td>04.10.2026</td>
+                      <td><span class="status-badge pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                      <td>Nova Label</td>
+                      <td>Crimson Wave</td>
+                      <td>02.10.2026</td>
+                      <td><span class="status-badge done">Done</span></td>
+                    </tr>
+                    <tr>
+                      <td>Wave Factory</td>
+                      <td>Afterglow</td>
+                      <td>30.09.2026</td>
+                      <td><span class="status-badge review">Review</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="data-card">
+              <div class="card-head">
+                <h3>Projektfortschritt</h3>
+                <span class="pill accent">Q4</span>
+              </div>
+
+              <div class="progress-stack">
+                <div class="progress-item">
+                  <label><span>Produktion</span><strong>72%</strong></label>
+                  <div class="progress"><span style="width: 72%"></span></div>
+                </div>
+                <div class="progress-item">
+                  <label><span>Mix</span><strong>64%</strong></label>
+                  <div class="progress"><span style="width: 64%"></span></div>
+                </div>
+                <div class="progress-item">
+                  <label><span>Mastering</span><strong>48%</strong></label>
+                  <div class="progress"><span style="width: 48%"></span></div>
+                </div>
+                <div class="progress-item">
+                  <label><span>Rechnung</span><strong>82%</strong></label>
+                  <div class="progress"><span style="width: 82%"></span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

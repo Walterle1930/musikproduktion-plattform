@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudiFlow | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell auth-shell">
+      <div class="auth-layout">
+        <div class="auth-card">
+          <div class="brand-wrap" style="margin-bottom: 18px;">
+            <div class="brand-mark">A</div>
+            <div>
+              <div class="brand-name">AudiFlow Studio</div>
+              <div class="brand-sub">Production Suite</div>
+            </div>
+          </div>
+
+          <h1>Willkommen zurück</h1>
+          <p class="auth-sub">Melde dich an, um Aufträge, Rechnungen und Produktionsstatus zu verwalten.</p>
+
+          <form id="loginForm" class="login-form">
+            <label>
+              E-Mail
+              <input type="email" placeholder="du@studio.de" required />
+            </label>
+
+            <label>
+              Passwort
+              <input type="password" placeholder="••••••••" required />
+            </label>
+
+            <div class="inline-row">
+              <label>
+                Rolle
+                <select>
+                  <option>Admin</option>
+                  <option>Producer</option>
+                  <option>Kunde</option>
+                  <option>Analyst</option>
+                </select>
+              </label>
+
+              <label>
+                Studio
+                <select>
+                  <option>Main Studio</option>
+                  <option>Mix Lab</option>
+                  <option>Mastering</option>
+                </select>
+              </label>
+            </div>
+
+            <button class="primary-btn" type="submit">Anmelden</button>
+            <a href="index.html" class="form-link">Zur Startseite</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
