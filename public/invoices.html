@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudiFlow | Rechnungen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell dashboard-shell">
+      <div class="dashboard-layout">
+        <aside class="sidebar card">
+          <div class="brand" style="margin-bottom: 22px;">
+            <div class="brand-mark">A</div>
+            <div>
+              <div class="brand-name">AudiFlow</div>
+              <div class="brand-sub">Finance</div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav">
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="orders.html">🎵 Aufträge</a>
+            <a href="kanban.html">📋 Kanban</a>
+            <a href="invoices.html" class="active">💰 Rechnungen</a>
+            <a href="analysis.html">📄 Analysen</a>
+            <a href="admin.html">⚙️ Admin</a>
+          </nav>
+        </aside>
+
+        <main class="dashboard-main">
+          <section class="top-panel card">
+            <div class="page-title">
+              <h2>Rechnungen</h2>
+              <p>Rechnungserstellung, Zustandsverfolgung und Zahlungssystem</p>
+            </div>
+            <div class="header-actions">
+              <button class="btn btn-primary" type="button" id="newInvoiceBtn">Neue Rechnung</button>
+            </div>
+          </section>
+
+          <section class="card data-card">
+            <div class="card-head">
+              <h3>Rechnungsübersicht</h3>
+              <span class="badge neutral" id="invoiceCounter">0</span>
+            </div>
+
+            <div class="table-wrap">
+              <table class="order-table" id="invoicesTable">
+                <thead>
+                  <tr>
+                    <th>Rechnungsnummer</th>
+                    <th>Kunde</th>
+                    <th>Gesamt</th>
+                    <th>Fälligkeitsdatum</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="invoicesBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

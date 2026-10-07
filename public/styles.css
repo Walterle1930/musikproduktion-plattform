@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudiFlow | Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell dashboard-shell">
+      <div class="dashboard-layout">
+        <aside class="sidebar card">
+          <div class="brand" style="margin-bottom: 22px;">
+            <div class="brand-mark">A</div>
+            <div>
+              <div class="brand-name">AudiFlow</div>
+              <div class="brand-sub">Admin</div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav">
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="orders.html">🎵 Aufträge</a>
+            <a href="kanban.html">📋 Kanban</a>
+            <a href="invoices.html">💰 Rechnungen</a>
+            <a href="analysis.html">📄 Analysen</a>
+            <a href="admin.html" class="active">⚙️ Admin</a>
+          </nav>
+        </aside>
+
+        <main class="dashboard-main">
+          <section class="top-panel card">
+            <div class="page-title">
+              <h2>Rollen & Accountverwaltung</h2>
+              <p>Teams, Rechte und Zugriffsverwaltung über die gesamte Plattform</p>
+            </div>
+          </section>
+
+          <section class="card data-card">
+            <div class="card-head">
+              <h3>Accounts</h3>
+              <span class="badge neutral" id="userCount">0</span>
+            </div>
+
+            <div class="table-wrap">
+              <table class="order-table" id="usersTable">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>E-Mail</th>
+                    <th>Rolle</th>
+                    <th>Team</th>
+                  </tr>
+                </thead>
+                <tbody id="usersBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

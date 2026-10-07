@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudiFlow | Aufträge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell dashboard-shell">
+      <div class="dashboard-layout">
+        <aside class="sidebar card">
+          <div class="brand" style="margin-bottom: 22px;">
+            <div class="brand-mark">A</div>
+            <div>
+              <div class="brand-name">AudiFlow</div>
+              <div class="brand-sub">Orders</div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav">
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="orders.html" class="active">🎵 Aufträge</a>
+            <a href="kanban.html">📋 Kanban</a>
+            <a href="invoices.html">💰 Rechnungen</a>
+            <a href="analysis.html">📄 Analysen</a>
+            <a href="admin.html">⚙️ Admin</a>
+          </nav>
+        </aside>
+
+        <main class="dashboard-main">
+          <section class="top-panel card">
+            <div class="page-title">
+              <h2>Auftragsverwaltung</h2>
+              <p>Erfassung, Tracking und Statuskontrolle der Musikprojekte</p>
+            </div>
+            <div class="header-actions">
+              <a href="index.html" class="btn btn-ghost">Startseite</a>
+              <button class="btn btn-primary" type="button">Neuen Auftrag</button>
+            </div>
+          </section>
+
+          <section class="card data-card">
+            <div class="card-head">
+              <h3>Auftragsliste</h3>
+              <span class="badge neutral" id="orderCount">0</span>
+            </div>
+
+            <div class="table-wrap">
+              <table class="order-table" id="ordersTable">
+                <thead>
+                  <tr>
+                    <th>Auftragsnummer</th>
+                    <th>Kunde</th>
+                    <th>Projekt</th>
+                    <th>Genre</th>
+                    <th>Status</th>
+                    <th>Budget</th>
+                  </tr>
+                </thead>
+                <tbody id="ordersListBody"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="card form-card" style="margin-top: 20px;">
+            <div class="card-head">
+              <h3>Neuen Auftrag anlegen</h3>
+            </div>
+
+            <form id="createOrderForm" class="stack-form">
+              <div class="field-row two-col">
+                <label>
+                  Kunde
+                  <input type="text" name="customer" required />
+                </label>
+                <label>
+                  Projektname
+                  <input type="text" name="project" required />
+                </label>
+              </div>
+
+              <div class="field-row two-col">
+                <label>
+                  Genre
+                  <select name="genre">
+                    <option>Pop</option>
+                    <option>Electronic</option>
+                    <option>Hip-Hop</option>
+                    <option>Rock</option>
+                    <option>Film</option>
+                  </select>
+                </label>
+                <label>
+                  Service
+                  <select name="service">
+                    <option>Produktion</option>
+                    <option>Mix & Master</option>
+                    <option>Songwriting</option>
+                    <option>Albumproduktion</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="field-row two-col">
+                <label>
+                  Fälligkeitsdatum
+                  <input type="date" name="deadline" required />
+                </label>
+                <label>
+                  Budget
+                  <input type="text" name="budget" value="€1.500" required />
+                </label>
+              </div>
+
+              <label>
+                Notiz
+                <textarea name="note" rows="4"></textarea>
+              </label>
+
+              <button type="submit" class="btn btn-primary">Auftrag speichern</button>
+            </form>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

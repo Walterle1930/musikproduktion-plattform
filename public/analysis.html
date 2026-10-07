@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudiFlow | Analysen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell dashboard-shell">
+      <div class="dashboard-layout">
+        <aside class="sidebar card">
+          <div class="brand" style="margin-bottom: 22px;">
+            <div class="brand-mark">A</div>
+            <div>
+              <div class="brand-name">AudiFlow</div>
+              <div class="brand-sub">Quality</div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav">
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="orders.html">🎵 Aufträge</a>
+            <a href="kanban.html">📋 Kanban</a>
+            <a href="invoices.html">💰 Rechnungen</a>
+            <a href="analysis.html" class="active">📄 Analysen</a>
+            <a href="admin.html">⚙️ Admin</a>
+          </nav>
+        </aside>
+
+        <main class="dashboard-main">
+          <section class="top-panel card">
+            <div class="page-title">
+              <h2>Plagiatsprüfung & Analysen</h2>
+              <p>Qualitäts- und Originalitätsabgleich für Musikprojekte</p>
+            </div>
+          </section>
+
+          <section class="card analysis-panel">
+            <div class="card-head">
+              <h3>Analyse starten</h3>
+              <span class="badge primary">AI Scan</span>
+            </div>
+
+            <textarea id="analysisText" rows="8" placeholder="Text oder Lyrics zur Prüfung einfügen…">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+
+            <div class="score-box">
+              <div class="score-meta">
+                <span>Originalitätswert</span>
+                <strong id="analysisScore">96.4%</strong>
+              </div>
+              <div class="progress-track"><span id="analysisProgress" style="width: 96.4%"></span></div>
+            </div>
+
+            <div class="analysis-grid" id="analysisGrid">
+              <div>
+                <strong id="similarityValue">0.8%</strong>
+                <span>Ähnlichkeit</span>
+              </div>
+              <div>
+                <strong id="qualityValue">4/5</strong>
+                <span>Tonqualität</span>
+              </div>
+              <div>
+                <strong id="loudnessValue">9.4</strong>
+                <span>Mix-Lautheit</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary full" type="button" id="runAnalysisBtn">Analyse ausführen</button>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

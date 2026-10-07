@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudiFlow Studio | Musikproduktion & Auftragsmanagement</title>
+    <meta name="description" content="AudiFlow Studio ist eine komplette Plattform für Musikproduktion, Auftragsmanagement, Kanban, Rechnungswesen und Plagiatsprüfung." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">A</div>
+          <div>
+            <div class="brand-name">AudiFlow Studio</div>
+            <div class="brand-sub">Production Suite</div>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <a href="#features">Lösungen</a>
+          <a href="#projects">Aufträge</a>
+          <a href="#kanban">Kanban</a>
+          <a href="#invoice">Rechnung</a>
+          <a href="#analysis">Analyse</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="login.html" class="btn btn-ghost">Anmelden</a>
+          <a href="dashboard.html" class="btn btn-primary">Demo starten</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <span class="eyebrow">Musikproduktion • Management • Vertrieb</span>
+          <h1>Alles für deine Musikproduktion in einer Plattform.</h1>
+          <p>
+            Verwalte Aufträge, Kunden, Teams, Analyseberichte, Kanban-Prozesse,
+            Rechnungserstellung und Qualitätsprüfungen in einem zentralen Studio-Workflow.
+          </p>
+
+          <div class="hero-actions">
+            <a href="login.html" class="btn btn-primary">Kostenloses Angebot</a>
+            <a href="dashboard.html" class="btn btn-secondary">Projekt ansehen</a>
+          </div>
+
+          <div class="stats-row">
+            <div>
+              <strong>1.2k+</strong>
+              <span>Projekte</span>
+            </div>
+            <div>
+              <strong>98%</strong>
+              <span>Zufriedenheit</span>
+            </div>
+            <div>
+              <strong>24h</strong>
+              <span>Durchlaufzeit</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel card">
+          <div class="panel-head">
+            <span>Live-Übersicht</span>
+            <span class="badge success">Aktiv</span>
+          </div>
+
+          <div class="mini-grid">
+            <div class="mini-card accent">
+              <span>Aufträge</span>
+              <strong>284</strong>
+            </div>
+            <div class="mini-card">
+              <span>Inkasso</span>
+              <strong>€24.8k</strong>
+            </div>
+            <div class="mini-card">
+              <span>Abnahme</span>
+              <strong>94%</strong>
+            </div>
+            <div class="mini-card">
+              <span>Prüfungen</span>
+              <strong>17</strong>
+            </div>
+          </div>
+
+          <div class="bars" aria-label="Produktivitätsdiagramm">
+            <span style="height: 28%"></span>
+            <span style="height: 42%"></span>
+            <span style="height: 52%"></span>
+            <span style="height: 64%"></span>
+            <span style="height: 82%"></span>
+            <span style="height: 73%"></span>
+            <span style="height: 91%"></span>
+          </div>
+
+          <div class="progress-line">
+            <div>
+              <label>Monatlicher Output</label>
+              <div class="progress-track"><span style="width: 82%"></span></div>
+            </div>
+            <strong>82%</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="container feature-section">
+        <div class="section-head">
+          <span class="eyebrow">Funktionen</span>
+          <h2>Der komplette Produktions-Workflow</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-box card">
+            <div class="icon-box">🎵</div>
+            <h3>Auftragsmanagement</h3>
+            <p>Projektstart, Auftragsnummer, Prozesse, Fristen, Kundenkommunikation und Projektstatus.</p>
+          </article>
+          <article class="feature-box card">
+            <div class="icon-box">👥</div>
+            <h3>Rollen & Accounts</h3>
+            <p>Admin, Producer, Kunde, Engineer, Analyst und Team-Berechtigungen mit klaren Rechten.</p>
+          </article>
+          <article class="feature-box card">
+            <div class="icon-box">📄</div>
+            <h3>PDF Analysen</h3>
+            <p>Automatisierte Qualitätsberichte, Mastering-Checks und Projektanalysen als PDF.</p>
+          </article>
+          <article class="feature-box card">
+            <div class="icon-box">🧾</div>
+            <h3>Rechnungsgenerierung</h3>
+            <p>Automatisch erstellte Rechnungen mit Positionszeilen, Mehrwertsteuer und Zahlungspfaden.</p>
+          </article>
+          <article class="feature-box card">
+            <div class="icon-box">📋</div>
+            <h3>Kanban Workflow</h3>
+            <p>Neu, In Arbeit, Review und Abgeschlossen in einem klaren Aufgabenboard.</p>
+          </article>
+          <article class="feature-box card">
+            <div class="icon-box">🔒</div>
+            <h3>Plagiatsprüfung</h3>
+            <p>Text-, Audio- und Originalitätschecks mit Risiko- und Qualitätsbewertung.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="container workspace-grid">
+        <div class="card form-card">
+          <div class="card-head">
+            <h3>Projektauftrag erstellen</h3>
+            <span class="badge neutral">Auftragsnummer #AF-2026-1004</span>
+          </div>
+
+          <form id="orderForm" class="stack-form">
+            <div class="field-row two-col">
+              <label>
+                Kunde
+                <input type="text" name="customer" value="Lena Musik GmbH" />
+              </label>
+              <label>
+                Projektname
+                <input type="text" name="project" value="Summer Pulse" />
+              </label>
+            </div>
+
+            <div class="field-row two-col">
+              <label>
+                Genre
+                <select name="genre">
+                  <option>Pop</option>
+                  <option>Electronic</option>
+                  <option>Hip-Hop</option>
+                  <option>Rock</option>
+                  <option>Film</option>
+                </select>
+              </label>
+              <label>
+                Service
+                <select name="service">
+                  <option>Produktion</option>
+                  <option>Mix & Master</option>
+                  <option>Songwriting</option>
+                  <option>Albumproduktion</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="field-row two-col">
+              <label>
+                Fälligkeitsdatum
+                <input type="date" name="deadline" value="2026-10-18" />
+              </label>
+              <label>
+                Budget
+                <input type="text" name="budget" value="€2.400" />
+              </label>
+            </div>
+
+            <label>
+              Projektbeschreibung
+              <textarea name="note" rows="4">Neue Single für den Herbstrelease, inklusive Mix, Mastering, Vocal Tuning und finaler Abnahme.</textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary" id="saveOrderBtn">Speichern</button>
+              <button type="submit" class="btn btn-primary">Auftrag anlegen</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card summary-card">
+          <div class="card-head">
+            <h3>Studio Dashboard</h3>
+            <span class="badge primary">Live</span>
+          </div>
+
+          <div class="status-list">
+            <div class="status-item">
+              <span class="dot green"></span>
+              <div>
+                <strong>Produktion</strong>
+                <small>12 aktive Tracks</small>
+              </div>
+              <span class="value">72%</span>
+            </div>
+            <div class="status-item">
+              <span class="dot blue"></span>
+              <div>
+                <strong>Mixing</strong>
+                <small>8 in Bearbeitung</small>
+              </div>
+              <span class="value">56%</span>
+            </div>
+            <div class="status-item">
+              <span class="dot purple"></span>
+              <div>
+                <strong>Mastering</strong>
+                <small>4 Review-Checks</small>
+              </div>
+              <span class="value">41%</span>
+            </div>
+            <div class="status-item">
+              <span class="dot orange"></span>
+              <div>
+                <strong>Rechnungen</strong>
+                <small>19 ausstehend</small>
+              </div>
+              <span class="value">€11.8k</span>
+            </div>
+          </div>
+
+          <div class="role-box">
+            <h4>Accounts / Rollen</h4>
+            <div class="role-tags">
+              <span>Admin</span>
+              <span>Producer</span>
+              <span>Kunde</span>
+              <span>Analyst</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kanban" class="container board-section">
+        <div class="section-head left">
+          <span class="eyebrow">Workflow</span>
+          <h2>Kanban Board</h2>
+        </div>
+
+        <div class="kanban-board">
+          <div class="kanban-column">
+            <div class="column-head"><span>Neu</span><strong>4</strong></div>
+            <div class="task-card">
+              <h4>Demo-Track aufnehmen</h4>
+              <p>Rhythm Section, Drums, Bassline</p>
+              <span class="tag purple">Kunde</span>
+            </div>
+            <div class="task-card">
+              <h4>Briefing finalisieren</h4>
+              <p>Vision, Zielgruppe, Stil</p>
+              <span class="tag blue">Admin</span>
+            </div>
+          </div>
+
+          <div class="kanban-column">
+            <div class="column-head"><span>In Arbeit</span><strong>5</strong></div>
+            <div class="task-card">
+              <h4>Melodie entwickeln</h4>
+              <p>Vocal Hook + Arrangement</p>
+              <span class="tag green">Producer</span>
+            </div>
+            <div class="task-card">
+              <h4>Mixing Session</h4>
+              <p>EQ, Compression, Bus</p>
+              <span class="tag orange">Engineer</span>
+            </div>
+          </div>
+
+          <div class="kanban-column">
+            <div class="column-head"><span>Review</span><strong>3</strong></div>
+            <div class="task-card">
+              <h4>Mastering Check</h4>
+              <p>Final loudness review</p>
+              <span class="tag purple">Analyst</span>
+            </div>
+          </div>
+
+          <div class="kanban-column">
+            <div class="column-head"><span>Abgeschlossen</span><strong>6</strong></div>
+            <div class="task-card">
+              <h4>Release MP3</h4>
+              <p>Final export + Upload</p>
+              <span class="tag green">Studio</span>
+            </div>
+            <div class="task-card">
+              <h4>Rechnung versendet</h4>
+              <p>Invoice #INV-1042</p>
+              <span class="tag blue">Finance</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="invoice" class="container two-panel">
+        <div class="card invoice-card">
+          <div class="card-head">
+            <h3>Rechnung erstellen</h3>
+            <span class="badge neutral">Invoice #INV-1042</span>
+          </div>
+
+          <div class="invoice-table">
+            <div class="table-head">
+              <span>Leistung</span>
+              <span>Menge</span>
+              <span>Preis</span>
+            </div>
+            <div class="row-item">
+              <span>Songwriting</span>
+              <span>1</span>
+              <span>€950</span>
+            </div>
+            <div class="row-item">
+              <span>Mix & Master</span>
+              <span>1</span>
+              <span>€1.150</span>
+            </div>
+            <div class="row-item">
+              <span>Produktion</span>
+              <span>1</span>
+              <span>€800</span>
+            </div>
+            <div class="row-item total-row">
+              <span>Gesamt</span>
+              <span></span>
+              <span>€2.900</span>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-secondary" type="button" id="printInvoiceBtn">Als PDF exportieren</button>
+            <button class="btn btn-primary" type="button">Rechnung senden</button>
+          </div>
+        </div>
+
+        <div id="analysis" class="card analytics-card">
+          <div class="card-head">
+            <h3>Plagiatsprüfung & Analyse</h3>
+            <span class="badge primary">AI Scan</span>
+          </div>
+
+          <textarea id="analysisInput" rows="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+
+          <div class="score-box">
+            <div class="score-meta">
+              <span>Originalitätswert</span>
+              <strong>96.4%</strong>
+            </div>
+            <div class="progress-track"><span style="width: 96.4%"></span></div>
+          </div>
+
+          <div class="analysis-grid">
+            <div>
+              <strong>0.8%</strong>
+              <span>Ähnlichkeit</span>
+            </div>
+            <div>
+              <strong>4/5</strong>
+              <span>Tonqualität</span>
+            </div>
+            <div>
+              <strong>9.4</strong>
+              <span>Mix-Lautheit</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary full" type="button" id="runAnalysisBtn">Analyse ausführen</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

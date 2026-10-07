@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AudiFlow | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell dashboard-shell">
+      <div class="dashboard-layout">
+        <aside class="sidebar card">
+          <div class="brand" style="margin-bottom: 22px;">
+            <div class="brand-mark">A</div>
+            <div>
+              <div class="brand-name">AudiFlow</div>
+              <div class="brand-sub">Admin Console</div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav">
+            <a href="#" class="active">🏠 Dashboard</a>
+            <a href="orders.html">🎵 Aufträge</a>
+            <a href="kanban.html">📋 Kanban</a>
+            <a href="invoices.html">💰 Rechnungen</a>
+            <a href="analysis.html">📄 Analysen</a>
+            <a href="admin.html">⚙️ Admin</a>
+          </nav>
+        </aside>
+
+        <main class="dashboard-main">
+          <section class="top-panel card">
+            <div class="page-title">
+              <h2>Übersicht</h2>
+              <p>Studio-Management für Produktion, Rechnung, Prüfung und Team</p>
+            </div>
+
+            <div class="header-actions">
+              <button class="btn btn-secondary" type="button">Export</button>
+              <a href="login.html" class="btn btn-primary">Neues Login</a>
+            </div>
+          </section>
+
+          <section class="kpi-grid" id="dashboardStats">
+            <div class="kpi-card card">
+              <small>Umsatz</small>
+              <strong>€48.2k</strong>
+              <span class="delta">+12.4%</span>
+            </div>
+            <div class="kpi-card card">
+              <small>Aktive Projekte</small>
+              <strong>86</strong>
+              <span class="delta">+8</span>
+            </div>
+            <div class="kpi-card card">
+              <small>Offene Rechnungen</small>
+              <strong>19</strong>
+              <span class="delta">-3</span>
+            </div>
+            <div class="kpi-card card">
+              <small>Prüfungen</small>
+              <strong>12</strong>
+              <span class="delta">+5</span>
+            </div>
+          </section>
+
+          <section class="dashboard-grid">
+            <div class="card data-card">
+              <div class="card-head">
+                <h3>Letzte Aufträge</h3>
+                <span class="badge neutral">Live</span>
+              </div>
+
+              <div class="table-wrap">
+                <table class="order-table">
+                  <thead>
+                    <tr>
+                      <th>Kunde</th>
+                      <th>Projekt</th>
+                      <th>Datum</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ordersTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card data-card">
+              <div class="card-head">
+                <h3>Projektfortschritt</h3>
+                <span class="badge primary">Q4</span>
+              </div>
+
+              <div class="progress-stack" id="progressStack"></div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
